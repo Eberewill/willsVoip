@@ -1,0 +1,31 @@
+{
+  "name": "willsmartweb",
+  "version": "1.0.0",
+  "description": "web base media service",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Iroh Eberechi Williams",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.1",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.11",
+    "mongose": "0.0.2-security",
+    "nodemon": "^1.19.1",
+    "paystack": "^2.0.1",
+    "request": "^2.88.2"
+  }
+}

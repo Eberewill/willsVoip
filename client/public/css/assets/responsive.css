@@ -1,0 +1,1690 @@
+@media only screen and (max-width: 1920px) {
+    .slider-style02 .slider-overlay::before {
+        border-bottom: 3000px solid transparent;
+        border-left: 1200px solid rgba(0, 0, 0, 0.5);
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(6) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(7) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(8) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(9) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(10) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(11) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu {
+        left: 215px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .slider-style02 .slider-overlay::before {
+        border-bottom: 2000px solid transparent;
+        border-left: 1000px solid rgba(0, 0, 0, 0.8);
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(6) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(7) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(8) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(9) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(10) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(11) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu {
+        left: -214px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* ---------------------------------------------
+		Main Demo
+	----------------------------------------------- */
+    
+    .counter-cta08 .counters {
+        margin-top: 50px;
+    }
+    .teacher-single05 .ts5-image figure img {
+        width: 100%;
+    }
+    .teachers-main .teacher-single05 .ts5-info {
+        padding: 40px 30px 40px 40px;
+    }
+    .blog-main .course08-carousel .carousel-item .course-single .course-info {
+        padding-right: 15px;
+    }
+    .footer-bottom .footer-bottom-inner,
+    .footer-bottom .footer-bottom-inner ul.footer-menu {
+        text-align: center;
+    }
+    .footer-bottom .footer-bottom-inner ul.footer-menu {
+        margin-top: 15px;
+    }
+    .counter-cta .counters span:first-child {
+        font-size: 40px;
+    }
+    .counter-cta08 .cta-from {
+        margin: 0;
+    }
+    header .main-menu nav.navbar .nav-container {
+        width: 100%;
+        padding-right: 0;
+    }
+    header .main-menu nav.navbar .nav-container .menu-search {
+        right: 40px;
+        top: -71px;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(8) ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(9) ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(10) ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(11) ul.dropdown-menu {
+        right: auto;
+        left: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.mega-menu ul.mega-menu-block {
+        width: 100%;
+        left: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.mega-menu:hover ul.mega-menu-block {
+        top: 50px;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li a::after {
+        content: none;
+    }
+    header .header-top .header-top-left ul li {
+        margin-bottom: 5px;
+    }
+    header .header-top .header-top-left ul li:last-child {
+        margin-bottom: 0;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+        margin: 30px 0;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+    .main-menu .navbar-header button.navbar-toggle span {
+        background: #80CD36;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav {
+        float: none !important;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #eee;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.active a::before,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.active a::after {
+        content: none;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        margin-top: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.open ul.dropdown-menu {
+        display: block;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.dropdown i {
+        padding: 18px 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.mega-menu {
+        position: relative;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li a {
+        display: block;
+        padding: 15px 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(6) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(7) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(8) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(9) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(10) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(11) ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu {
+        left: 212px;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.dropdown a.dropdown-toggle::before {
+        right: 0;
+        top: 15px;
+    }
+    .caption-content {
+        text-align: center;
+    }
+    .about .about-text {
+        padding-right: 10px;
+    }
+    .teachers .teachers-block .teacher-single .teacher-image {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .teachers .teachers-block .teacher-single .teacher-image img {
+        min-height: auto;
+        display: inline;
+    }
+    .teachers .teachers-block .row:last-child .teacher-single {
+        margin-bottom: 50px;
+    }
+    .video {
+        padding: 120px 0;
+    }
+    .video .vt-box {
+        min-width: 100%;
+        left: 0;
+    }
+    .video .vt-box .vt-text {
+        padding: 30px 0;
+    }
+    .video .vt-box .vt-text h2 {
+        font-size: 30px;
+        margin: 0 0 25px;
+    }
+    .video .vt-box .vt-btn a {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+    .video .video-play-btn {
+        padding: 100px 0 0 0;
+        text-align: center;
+    }
+    .events .events-block .event-single .event-image {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .events .events-block .event-single .event-image img {
+        min-height: auto;
+        display: inline;
+    }
+    .courses .owl-nav {
+        display: none;
+    }
+    .courses .owl-dots {
+        display: block;
+    }
+    .testimonial .owl-nav {
+        display: none;
+    }
+    .teachers .owl-nav {
+        display: none;
+    }
+    .teachers .owl-dots {
+        display: block;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 2
+	----------------------------------------------------------------------------- */
+    
+    .slider-style02 .slider-overlay::before {
+        border-bottom: 1600px solid transparent;
+        border-left: 800px solid rgba(0, 0, 0, 0.8);
+    }
+    nav.navbar .collapse.in {
+        background: #eee;
+        margin: 0;
+    }
+    nav.navbar .collapse.in ul.navbar-nav {
+        margin: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:last-child {
+        border-bottom: 0 none;
+    }
+    .video-style02 .video-play-btn {
+        top: -210px;
+    }
+    .events-style02 .events-block .event2-single .event-thumb {
+        position: relative;
+        text-align: center;
+        top: 50%;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        transform: translateY(50%);
+    }
+    .testimonial-style02 .owl-stage-outer {
+        min-height: 355px;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-left .client-image {
+        top: 90px;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-left .client-image img {
+        height: auto;
+        width: 120px;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-left .client-content {
+        padding: 50px 15px 50px 70px;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-right .client-image {
+        top: 90px;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-right .client-image img {
+        height: auto;
+        width: 120px;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-right .client-content {
+        padding: 50px 70px 50px 15px;
+    }
+    .blog .blog-posts02 .single-blog .blog-excerpt {
+        left: 5%;
+        width: 90%;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 3
+	----------------------------------------------------------------------------- */
+    
+    .container-custom {
+        width: 750px;
+    }
+    .counter-cta {
+        padding: 120px 0;
+    }
+    .counter-cta .counters .counters-block {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .counter-cta .cta h2 {
+        font-size: 25px;
+        padding: 50px 15px 20px 15px;
+    }
+    .counter-cta .cta p {
+        padding: 0 15px 30px 15px;
+    }
+    .counter-cta .cta a {
+        font-size: 30px;
+        padding: 15px 0;
+    }
+    .teachers-style02 {
+        padding-bottom: 120px;
+    }
+    /* --------------------------------------------------------
+	Template Version 04
+	---------------------------------------------------------- */
+    
+    .course-wrapper .course-search .search-container .home-search-inner form .select-default select {
+        font-size: 15px;
+        padding: 17px 25px 17px 15px;
+    }
+    .course-wrapper .course-search .search-container .home-search-inner form button {
+        font-size: 15px;
+        padding: 17px 7px;
+    }
+    .course-wrapper .course-search {
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .course-wrapper .course-tab-wrapper .course-tabs div.nav-tabs .col-sm-2 a figure figcaption {
+        font-size: 15px;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text {
+        padding: 0;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text span.course-subtitle::before {
+        right: -80px;
+        width: 150px;
+    }
+    .course-wrapper .course-style04 .course-single.image-left .cs-text span.course-subtitle::before {
+        left: -80px;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text span.course-subtitle {
+        font-size: 20px;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text h2 {
+        font-size: 25px;
+        margin: 15px 0 25px;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text ul.course-author {
+        margin-bottom: 20px;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text ul.course-excerpt {
+        margin-bottom: 0;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text a.view-btn {
+        font-size: 15px;
+        padding: 10px 40px;
+    }
+    .course-wrapper .course-style04 .browse-all-course a {
+        font-size: 25px;
+        padding: 15px 0;
+    }
+    .course-wrapper .course-search .serach-header {
+        padding: 20px 0 20px 130px;
+    }
+    .home .home-content {
+        top: 40%;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 5
+	----------------------------------------------------------------------------- */
+    
+    #course-carousel .owl-nav,
+    #testimonial-carousel02 .owl-nav {
+        display: none;
+    }
+    #course-carousel .owl-dots,
+    #testimonial-carousel02 .owl-dots {
+        display: block;
+    }
+    .kids-register .countdown {
+        -webkit-transform: translateY(15%);
+        -ms-transform: translateY(15%);
+        transform: translateY(15%);
+    }
+    .kids-register .countdown span {
+        font-size: 20px;
+    }
+    .kids-register .countdown h2 {
+        font-size: 60px;
+    }
+    .kids-register .countdown #timer-wrapper .timer-body-block .table-cell {
+        margin: 0 20px 20px 0;
+    }
+    .kids-register .registration-form h2 {
+        font-size: 26px;
+        padding: 40px 20px 30px 20px;
+    }
+    .kids-register .registration-form form input,
+    .kids-register .registration-form form textarea {
+        border-color: #b2b2b2;
+        font-size: 17px;
+        padding: 0 0 15px;
+    }
+    .kids-register .registration-form form button {
+        font-size: 30px;
+        padding: 15px 0;
+    }
+    .kids-teacher .teacher-single05 .ts5-image ul li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .about.about05 .about-image01,
+    .about.about05 .about-image02 {
+        position: static;
+        margin-top: 20px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 6
+	----------------------------------------------------------------------------- */
+    
+    .about06 .about-boxes a ul li {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+    }
+    .about06 .about-boxes a ul li:first-child {
+        margin-bottom: 10px;
+    }
+    .about06 .about-boxes a ul li img {
+        display: inline;
+    }
+    .about06 .about-boxes a ul li:last-child {
+        padding-left: 0px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 8
+	----------------------------------------------------------------------------- */
+    
+    .slider-bottom ul.slider-bottom-info li span.icon {
+        height: 50px;
+        width: 50px;
+    }
+    .slider-bottom ul.slider-bottom-info li span i {
+        font-size: 20px;
+    }
+    .slider-bottom ul.slider-bottom-info li:first-child {
+        margin-bottom: 10px;
+    }
+    .slider-bottom .connect-btn a {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 33px;
+    }
+    .service-boxes .service-boxes-inner .service-box-content {
+        min-height: 385px;
+    }
+    .about08 .about-text {
+        padding: 50px 0 50px 30px;
+    }
+    .counter-cta08 .cta-from {
+        padding: 0;
+        width: 100%;
+    }
+    .footer-bottom08 p {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .footer08 .footer-bottom08 ul.footer-menu {
+        text-align: center;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 9
+	----------------------------------------------------------------------------- */
+    
+    .dance-category .category-bottom .about-boxes a ul li {
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .dance-category .category-bottom .about-boxes a ul li:last-child {
+        padding-left: 15px;
+    }
+    .about-boxes a ul li img {
+        width: 60px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 10
+	----------------------------------------------------------------------------- */
+    
+    .why-choose-us .wcu-content .section-header03 h2 {
+        font-size: 45px;
+    }
+    .why-choose-us .wcu-content ul li {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+    .why-choose-us .wcu-image {
+        min-height: 695px;
+    }
+    .pricing-table .price-table-wrapper .pricing-single {
+        margin-bottom: 30px;
+    }
+    .driving-cta .driving-offer h2 {
+        font-size: 30px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 11
+	----------------------------------------------------------------------------- */
+    
+    #header-style02.header-style11 nav.navbar {
+        background: none;
+        margin-top: 0;
+    }
+    .home11 .content-left h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .home11 .content-left ul li a.home-btn {
+        padding: 10px 15px;
+    }
+    .home11 .content-left .arrow {
+        display: none;
+    }
+    .home11 .content-right form h2 {
+        font-size: 35px;
+    }
+    .events11 .events-list .event-single-row .event-meta .event-details-link a {
+        font-size: 15px;
+        padding: 10px;
+        text-align: center;
+    }
+    .events11 .events-list .event-single-row .event-day span:first-child,
+    .events11 .events-list .event-single-row .event-day span {
+        font-size: 15px;
+    }
+    .events11 .events-list .event-single-row .event-details .event-info h3 {
+        font-size: 20px;
+        margin: 0 0 15px;
+    }
+    .events11 .events-list .event-single-row .event-details .event-info {
+        padding-left: 15px;
+    }
+    .events11 .events-list .event-single-row .event-day::before {
+        right: 5px;
+    }
+    .blog11 .blog11-contents .blog11-single figure img {
+        width: 100%;
+    }
+    .blog11 .blog11-contents .blog11-single {
+        margin-bottom: 30px;
+    }
+    .testimonial08 .app-download .app-details ul li {
+        margin-bottom: 15px;
+    }
+    .testimonial08 .app-download .app-details ul li:last-child {
+        margin-bottom: 0;
+    }
+    .testimonial08 .app-download .app-details {
+        margin-top: 65px;
+    }
+    .get-started {
+        background-position: top;
+    }
+    .get-started .gs-content {
+        min-height: 400px;
+    }
+    .get-started .gs-features::before {
+        left: -200px;
+    }
+    .get-started .gs-features .gs-features-inner {
+        padding-left: 0;
+    }
+    .get-started .gs-content .gs-content-inner {
+        left: 15px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 13
+	----------------------------------------------------------------------------- */
+    
+    .header13 .main-menu nav.navbar .navbar-collapse ul.navbar-nav li {
+        display: block;
+        padding: 0;
+        text-align: left;
+    }
+    .header13 .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.mega-menu:hover ul.mega-menu-block {
+        top: 50px;
+    }
+    .benefit-section .benefit-content .section-header11 h2 {
+        font-size: 30px;
+    }
+    .benefit-section .benefit-content {
+        padding: 50px 0;
+    }
+    .testimonial13 .testimonial-boxes .testimonial-single-inner {
+        margin-bottom: 30px;
+    }
+    .instructors .owl-nav {
+        display: none;
+    }
+    .instructors .owl-dots {
+        display: block;
+    }
+    /* --------------------------------------------------------------------------
+		Coming Soon
+	----------------------------------------------------------------------------- */
+    
+    .coming-soon {
+        padding-top: 215px;
+    }
+    /* --------------------------------------------------------------------------
+		Kindergarten Version 02
+	----------------------------------------------------------------------------- */
+    
+    .information-middle {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .information-middle .info-content {
+        padding: 0 0 0 15px;
+    }
+    .kindergarten-gallery .gallery-wrapper .gallery-box {
+        width: 25%;
+    }
+    .kg-teachers .kg-teachers-wrapper .teacher-single-inner {
+        margin-bottom: 40px;
+    }
+    .kg-cta p {
+        margin: 0;
+        line-height: 30px;
+    }
+    .courses .course-btn {
+        margin-top: 60px;
+    }
+    .counter-cta {
+        padding: 100px 0;
+    }
+    .counter-cta .vt-box {
+        top: 30px;
+    }
+    .container-custom .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .testimonial-kindergarten .testimonial-kg .owl-nav {
+        display: none;
+    }
+    .section-header03 h2 {
+        line-height: 45px;
+    }
+    .information-cta p {
+        width: 100%;
+    }
+    .kids-register {
+        overflow: hidden;
+    }
+    .footer-top-subscribe h2 {
+        font-size: 20px;
+        margin: 15px 0 0;
+    }
+    .teacher-registration-wrapper .teacher-apply {
+        margin-top: 50px;
+    }
+    .blog-wrapper .blog-three-content .carousel-item .course-single .course-info {
+        padding-right: 15px;
+    }
+    .blog-wrapper .blog-three-content .carousel-item .course-single .course-image figure img {
+        width: 100%;
+    }
+    .blog-box-single .blog-thumb img {
+        width: 100%;
+    }
+    .blog12 .blog-boxes .blog-box-single .blog-excerpt {
+        padding: 15px 30px 15px 15px;
+    }
+    .all-course-wrapper .course-six-wrapper .course-single .course-image figure img {
+        width: 100%;
+    }
+    .single-course-sidebar {
+        margin-top: 50px;
+    }
+    .event-details-wrapper .single-event-inner .event-content .join-event ul li:last-child {
+        float: none;
+        margin-top: 20px;
+    }
+    .faq-wrapper .faq-tabs .panel-group .panel .panel-heading h4.panel-title a {
+        padding: 15px 30px 15px 15px;
+    }
+    .faq-wrapper .faq-tabs .panel-group .panel .panel-heading h4.panel-title a {
+        line-height: 24px;
+    }
+    .product-details .product-info {
+        margin-top: 25px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* --------------------------------------------------------------------------
+		Template Version 2
+	----------------------------------------------------------------------------- */
+    
+    .slider-style02 .slider-overlay::before {
+        border-bottom: 2000px solid transparent;
+        border-left: 500px solid rgba(0, 0, 0, 0.8);
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 13
+	----------------------------------------------------------------------------- */
+    
+    .home13 .home13-contents h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .home13 {
+        padding-top: 140px;
+    }
+    .home13 .home13-contents h1 span {
+        font-size: 40px;
+        height: 120px;
+        top: -100px;
+        width: 120px;
+    }
+    /* --------------------------------------------------------------------------
+		Kindergarten Version 02
+	----------------------------------------------------------------------------- */
+    
+    .kindergarten-gallery .gallery-wrapper .gallery-box {
+        width: 33.3333%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .navbar-toggle {
+        display: none;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li {
+        margin-right: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav {
+        padding: 15px 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li a {
+        padding: 15px 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.mega-menu ul.mega-menu-block {
+        width: 100%;
+        left: 0;
+    }
+    header .main-menu nav.navbar .nav-container {
+        float: none;
+        padding-right: 0;
+        width: 100%;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        display: none;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:hover ul.dropdown-menu {
+        display: block;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(8) ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(9) ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(10) ul.dropdown-menu,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:nth-child(11) ul.dropdown-menu {
+        left: 0;
+        right: auto;
+    }
+    nav.mean-nav ul.nav li.dropdown ul.dropdown-menu li.dropdown-submenu i {
+        display: none;
+    }
+    .contact-wrapper .contact-two-bottom .team-single:last-child {
+        margin-bottom: 50px;
+    }
+    .all-course-wrapper .course-style02-wrapper .course-single {
+        display: inline-block;
+    }
+    .all-course-wrapper .course-six-wrapper .course-single .course-image figure {
+        display: inline-block;
+    }
+    .single-course-sidebar {
+        margin-top: 50px;
+    }
+    .blog-sidebar {
+        margin-top: 50px;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-speaker .speaker-list .col-sm-3 {
+        margin-bottom: 50px;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-speaker .speaker-list .col-sm-3:last-child {
+        margin-bottom: 0;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-speaker .speaker-list figure figcaption {
+        text-align: left;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-time-place h3 {
+        margin: 30px 0 15px;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-participant figure figcaption {
+        text-align: left;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-participant .col-sm-3 {
+        margin-bottom: 50px;
+    }
+    .event-details-wrapper .single-event-inner .event-content .event-participant .col-sm-3:last-child {
+        margin-bottom: 0;
+    }
+    .event-details-wrapper .single-event-inner .event-content .join-event ul li {
+        margin-bottom: 20px;
+    }
+    .event-details-wrapper .single-event-inner .event-content .join-event ul li:last-child {
+        float: none;
+    }
+    .events .events-block .event-single .event-details {
+        text-align: center;
+    }
+    .faq-tabs .col-sm-6 {
+        margin-top: 25px;
+    }
+    .footer-bottom p {
+        text-align: center;
+    }
+    .footer-bottom ul.footer-menu {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .forum-wrapper .forum-header .forum-name h3 {
+        text-align: center;
+    }
+    .forum-wrapper .forum-header .forum-name h3,
+    .forum-wrapper .forum-header .total-topic h3,
+    .forum-wrapper .forum-header .total-post h3,
+    .forum-wrapper .forum-header .last-modified h3 {
+        margin: 10px 0;
+    }
+    .forum-wrapper .forum-content .single-forum .forum-subject {
+        text-align: center;
+    }
+    .forum-wrapper .forum-content .single-forum .ftopics,
+    .forum-wrapper .forum-content .single-forum .fposts,
+    .forum-wrapper .forum-content .single-forum .f-modified-time {
+        margin-bottom: 15px;
+    }
+    .shop-area .product-column .single-product figure,
+    .related-products .product-column .single-product figure,
+    .all-teachers-wrapper .teachers-two-wrapper .teacher-single-box figure {
+        text-align: center;
+    }
+    .shop-area .product-column .single-product figure img,
+    .related-products .product-column .single-product figure img,
+    .all-teachers-wrapper .teachers-two-wrapper .teacher-single-box figure img {
+        display: inline;
+    }
+    .all-teachers-wrapper .teachers-four-wrapper .teacher-single {
+        display: inline-block;
+    }
+    .teacher-details-wrapper .teacher-detail-right .teacher-info,
+    .teacher-details-wrapper .teacher-detail-right .teacher-contact {
+        margin-top: 50px;
+    }
+    .contact-two-top .contact-info {
+        margin-top: 50px;
+    }
+    .contact-one-form {
+        margin-bottom: 50px;
+    }
+    .blog-wrapper .blog-three-content .carousel-item .course-single .course-info {
+        padding-right: 15px;
+    }
+    .blog-wrapper .blog-three-content .carousel-item .course-single .course-image figure {
+        display: inline-block;
+    }
+    .courses .course-btn {
+        margin-top: 60px;
+    }
+    .online-course-single figure {
+        text-align: center;
+    }
+    .online-course-single figure img {
+        display: inline;
+    }
+    .information-middle {
+        padding: 50px 0;
+    }
+    .kindergarten-gallery .gallery-wrapper .gallery-box {
+        text-align: center;
+    }
+    .kindergarten-gallery .gallery-wrapper .gallery-box figure {
+        text-align: center;
+        display: inline-block;
+    }
+    .kindergarten-gallery .gallery-wrapper .gallery-box figure img {
+        display: inline;
+    }
+    .kg-cta p {
+        line-height: 30px;
+    }
+    .blog-posts .single-blog .blog-thumb img {
+        width: 100%;
+    }
+    .video-gallery .video-gallery-items .video-single {
+        display: inline-block;
+    }
+    .video-gallery .video-gallery-items .col-sm-4 {
+        text-align: center;
+    }
+    .driving-cta .driving-video .video-play {
+        text-align: center;
+    }
+    .driving-cta .driving-video .video-play a,
+    .driving-cta .driving-video .video-play span {
+        display: inline-block;
+    }
+    .driving-cta .driving-video .video-play a i {
+        position: relative;
+        top: 28px;
+    }
+    .kids-register .registration-form {
+        margin-top: 50px;
+    }
+    .counter-cta08 .cta-from {
+        width: 100%;
+    }
+    .course-wrapper .course-search {
+        left: 0;
+        margin-left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .nav ul li a figure img {
+        width: 100%;
+    }
+    .course-single .cs-image figure img {
+        width: 100%;
+    }
+    .home11 .content-left .arrow {
+        display: none;
+    }
+    .course11-categories .category-blocks {
+        text-align: center;
+    }
+    .get-started .gs-content .gs-content-inner {
+        padding: 0 15px;
+    }
+    .get-started {
+        background: none;
+    }
+    .get-started .gs-content {
+        min-height: 350px;
+    }
+    .events11 .events-list .event-single-row .event-details .event-image,
+    .events11 .events-list .event-single-row .event-details .event-info {
+        display: block;
+    }
+    .events11 .events-list .event-single-row .event-details .event-image,
+    .events11 .events-list .event-single-row .event-details .event-info {
+        width: 100%;
+    }
+    .events11 .events-list .event-single-row .event-details .event-image {
+        margin-bottom: 15px;
+    }
+    .events11 .events-list .event-single-row .event-details .event-image img {
+        display: inline;
+    }
+    .events11 .events-list .event-single-row .event-details {
+        text-align: center;
+    }
+    .events11 .events-list .event-single-row .event-meta::before {
+        content: none;
+    }
+    .blog11 .blog11-contents .blog11-single {
+        text-align: center;
+    }
+    .blog11 .blog11-contents .blog11-single figure {
+        display: inline-block;
+    }
+    .blog11 .blog11-contents .blog11-single .blog-excerpt ul li:last-child {
+        float: none;
+        margin-right: 0;
+    }
+    .blog11 .blog11-contents .blog11-single .blog-excerpt ul li {
+        margin-right: 15px;
+    }
+    .testimonial02 .app-download {
+        text-align: center;
+    }
+    .testimonial08 .app-download .app-screen {
+        text-align: center;
+    }
+    .testimonial08 .app-download .app-details h3 {
+        max-width: 100%;
+    }
+    .about06 .about-boxes a ul li {
+        vertical-align: middle;
+    }
+    .benefit-section .benefit-image {
+        display: none;
+    }
+    .teacher-registration-wrapper .teacher-apply {
+        margin-top: 50px;
+    }
+    /* --------------------------------------------------------------
+		Main Demo
+	--------------------------------------------------------------- */
+    
+    .slider-bottom-services .service-box {
+        margin-bottom: 40px;
+    }
+    .slider-bottom-services .col-sm-3:last-child .service-box {
+        margin-bottom: 0;
+    }
+    .counter-cta .counters span:first-child {
+        font-size: 40px;
+    }
+    .counter-cta .counters .counters-block {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .counter-cta08 .counters {
+        margin: 0;
+    }
+    .counter-cta08 .cta-from {
+        margin: 0 auto;
+        padding: 50px 0 100px;
+        width: 100%;
+    }
+    .events-style02 .events-block .event2-single .event-info {
+        text-align: center;
+    }
+    .teacher-single05 figure {
+        text-align: center;
+    }
+    .teacher-single05 figure img {
+        display: inline;
+    }
+    .teachers-main .teacher-single05 .ts5-info {
+        padding: 40px 40px 40px 40px;
+        text-align: center;
+    }
+    .blog-main .course08-carousel .carousel-item .course-single .course-info {
+        padding-right: 15px;
+    }
+    header .header-top .header-top-left,
+    header .header-top .header-top-right {
+        text-align: center;
+    }
+    header .header-top .header-top-right {
+        margin-top: 10px;
+    }
+    .main-menu .navbar-header button.navbar-toggle span {
+        background: #80CD36;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav {
+        float: none !important;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.active a::before,
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li.active a::after {
+        content: none;
+    }
+    .slider .slider-caption .caption-content p {
+        text-align: center;
+    }
+    .slider .slider-caption .caption-content h1 {
+        font-size: 30px;
+        line-height: 47px;
+        margin: 35px 0 60px;
+        max-width: 100%;
+        text-align: center;
+    }
+    .slider .slider-caption .caption-content ul {
+        text-align: center;
+    }
+    .slider .slider-caption .caption-content ul li {
+        display: inline-block;
+        margin: 0 0 15px 0;
+    }
+    .slider .slider-caption .caption-content ul li a {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+    .about .about-text {
+        padding-right: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about .about-text h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .section-header h2 {
+        font-size: 45px;
+    }
+    .section-header span::before,
+    .section-header span::after {
+        width: 80px;
+    }
+    .courses .owl-nav {
+        display: none;
+    }
+    .courses .owl-dots {
+        display: block;
+    }
+    .teachers .teachers-block .teacher-single .teacher-image {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .teachers .teachers-block .teacher-single .teacher-image img {
+        min-height: auto;
+        display: inline;
+    }
+    .teachers .teachers-block .row:last-child .teacher-single {
+        margin-bottom: 50px;
+    }
+    .video {
+        padding: 120px 0;
+    }
+    .video .vt-box {
+        min-width: 100%;
+        left: 0;
+    }
+    .video .vt-box .vt-text {
+        padding: 30px 0;
+    }
+    .video .video-play-btn {
+        padding: 100px 0 0 0;
+        text-align: center;
+    }
+    .events .events-block .event-single .event-image {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .events .events-block .event-single .event-image img {
+        min-height: auto;
+        display: inline;
+    }
+    .testimonial .owl-nav {
+        display: none;
+    }
+    .blog .blog-posts .single-blog {
+        margin-bottom: 30px;
+    }
+    footer .container .row .col-sm-3 .widget:last-child {
+        margin-bottom: 50px;
+    }
+    footer .footer-bottom p#back-top {
+        right: 15px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 2
+	----------------------------------------------------------------------------- */
+    
+    nav.navbar .collapse.in {
+        background: #eee;
+        margin: 0;
+    }
+    nav.navbar .collapse.in ul.navbar-nav {
+        margin: 0;
+    }
+    header .main-menu nav.navbar .navbar-collapse ul.navbar-nav li:last-child {
+        border-bottom: 0 none;
+    }
+    .about-style02 {
+        padding: 0 0 60px 0;
+    }
+    .about-style02 .about-image {
+        min-width: 100%;
+        position: static;
+    }
+    .teachers .owl-nav {
+        display: none;
+    }
+    .teachers .owl-dots {
+        display: block;
+    }
+    .video-style02 .video-play-btn {
+        min-height: 300px;
+        top: -50px;
+    }
+    .video-style02 .video-counter .v-counter-box {
+        margin-bottom: 30px;
+    }
+    .video-style02 .video-counter .v-counter-box:last-child {
+        margin-bottom: 0;
+    }
+    .video-style02 .video-counter span {
+        font-size: 50px;
+    }
+    .events-style02 .events-block .event2-single .event-date {
+        position: relative;
+        text-align: center;
+        top: 0;
+        margin-bottom: 30px;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .events-style02 .events-block .event2-single .event-thumb {
+        position: static;
+        top: 0;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    .events-style02 .events-block .event2-single .event-thumb {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .events-style02 .events-block .event2-single .event-thumb img {
+        display: inline;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-left .client-image {
+        left: 0;
+        position: static;
+        top: 0;
+        box-shadow: none;
+        text-align: center
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-left .client-image img,
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-right .client-image img {
+        width: auto;
+        height: auto;
+        display: inline;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-left .client-content {
+        padding: 30px;
+        position: static;
+        width: 100%;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-right .client-image {
+        left: 0;
+        position: static;
+        top: 0;
+        box-shadow: none;
+        text-align: center
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .ts-right .client-content {
+        padding: 30px;
+        position: static;
+        width: 100%;
+    }
+    .testimonial-style02 .testimonial-carousel02 .testimonial-single .col-sm-6:last-child {
+        margin-top: 50px;
+    }
+    .blog .blog-posts02 .single-blog .blog-excerpt {
+        left: 5%;
+        width: 90%;
+    }
+    .blog .blog-posts02 .col-sm-6:nth-child(3) .single-blog {
+        margin-bottom: 65px;
+    }
+    .footer-style02 .special-widget::before {
+        height: 100%;
+    }
+    .footer-style02 .special-widget {
+        padding-bottom: 50px;
+    }
+    .footer-style02 .footer-top-subscribe form .form-group button {
+        margin-top: 15px;
+    }
+    /* --------------------------------------------------------
+	Template Version 03
+	---------------------------------------------------------- */
+    
+    .home .home-content h1 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+    .home .home-content ul li {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .home .home-content form.home-search button {
+        right: 15px;
+    }
+    .course-category .course-categories .cc-single figure figcaption h2 {
+        font-size: 20px;
+    }
+    .course-category .course-categories .cc-single figure figcaption a {
+        padding: 3px 20px 12px;
+    }
+    .course-category .course-categories .cc-single figure img {
+        width: 100%;
+    }
+    .course-category .course-info-block .cib-single {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .course-category .course-info-block .cib-single img {
+        display: inline;
+    }
+    .counter-cta .counters {
+        background: none;
+    }
+    .testimonial02 .testimonial-thumb ul {
+        margin-bottom: 0;
+    }
+    .testimonial02 .testimonial-thumb ul li {
+        margin-bottom: 20px;
+    }
+    .footer-bottom p#back-top {
+        right: 15px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 04
+	----------------------------------------------------------------------------- */
+    
+    .course-wrapper .course-search .serach-header {
+        border-radius: 0;
+        padding: 15px;
+        width: 100%;
+    }
+    .course-wrapper .course-search .search-container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .course-wrapper .course-search .search-container .home-search-inner form .select-default select {
+        margin-bottom: 30px;
+    }
+    .course-wrapper .course-search {
+        position: static;
+    }
+    .course-wrapper .course-tab-wrapper {
+        padding-top: 0;
+    }
+    .course-wrapper .course-tab-wrapper .course-tabs .tab-content .tab-pane a {
+        margin-top: 15px;
+    }
+    .course-wrapper .course-tab-wrapper .course-tabs div.nav-tabs .col-sm-2 a {
+        margin: 0 0 30px 0;
+        display: block;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text span.course-subtitle::before {
+        content: none;
+    }
+    .course-wrapper .course-style04 .course-single .cs-text,
+    .course-wrapper .course-style04 .course-single.image-left .cs-image {
+        margin-bottom: 30px;
+    }
+    /* -----------------------------------------------------------------
+		Template Version 05
+	----------------------------------------------------------------- */
+    
+    .kids-register .countdown {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .kids-teacher .teacher-single05 .ts5-image {
+        text-align: center;
+        top: 0;
+    }
+    .kids-teacher .teacher-single05 .ts5-image img {
+        display: inline;
+    }
+    .kids-teacher .teacher-single05 .ts5-info {
+        padding: 40px 20px 40px 20px;
+        text-align: center;
+    }
+    .blog02 .blog-posts .single-blog {
+        margin-bottom: 30px;
+    }
+    .blog02 .blog-posts .col-sm-4:last-child .single-blog {
+        margin-bottom: 0;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 6
+	----------------------------------------------------------------------------- */
+    
+    .about06 .about-content {
+        margin-bottom: 50px;
+    }
+    .about06 .about-boxes a {
+        margin-bottom: 30px;
+    }
+    .about06 .about-boxes .col-sm-4:last-child a {
+        margin-bottom: 0;
+    }
+    .section-header03 h2 {
+        font-size: 30px;
+    }
+    .information-cta {
+        padding: 120px 0;
+    }
+    .teachers06 .teachers-block .teacher-single {
+        margin-bottom: 50px;
+    }
+    .teachers06 .teachers-block .teacher-single img {
+        width: 100%;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 7
+	----------------------------------------------------------------------------- */
+    
+    .section-header04 h2 {
+        font-size: 30px;
+    }
+    .courses06 .course-slider03 .owl-nav,
+    .publications .publication-carousel .owl-nav {
+        top: -125px;
+    }
+    .blog07 .blog07-wrapper .owl-nav {
+        top: -160px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 8
+	----------------------------------------------------------------------------- */
+    
+    .slider-bottom .connect-btn {
+        text-align: center;
+    }
+    .service-boxes .service-boxes-inner .service-box-content {
+        margin-bottom: 30px;
+    }
+    .service-boxes .service-boxes-inner .col-sm-4:last-child .service-box-content {
+        margin-bottom: 0;
+    }
+    .about08 .about-text {
+        padding: 50px 15px 50px 15px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 09
+	----------------------------------------------------------------------------- */
+    
+    .dance-category .category-bottom .about-boxes a {
+        margin-bottom: 30px;
+    }
+    .dance-category .category-bottom .about-boxes .col-sm-4:last-child a {
+        margin-bottom: 0;
+    }
+    .dance-class .dance-courses .course-single figure img {
+        width: 100%;
+    }
+    .information-cta p {
+        width: 100%;
+    }
+    .dance-category .owl-nav,
+    .dance-teachers .owl-nav,
+    .blog06 .blog-posts-carousel .owl-nav {
+        top: -50px;
+    }
+    .dance-class .dance-courses .view-all-btn,
+    .video-gallery .video-gallery-items .view-all-btn {
+        top: -50px;
+    }
+    .dance-class .dance-courses .view-all-btn a,
+    .video-gallery .video-gallery-items .view-all-btn a {
+        font-size: 15px;
+        padding: 5px 15px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 10
+	----------------------------------------------------------------------------- */
+    
+    .about-ds .about-ds-content a.rm-btn {
+        margin-bottom: 50px;
+    }
+    .why-choose-us .wcu-content {
+        padding: 100px 15px;
+    }
+    .why-choose-us .wcu-image {
+        min-height: auto;
+    }
+    .driving-cta .driving-video .video-play {
+        position: static;
+        top: auto;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .driving-cta .driving-offer a {
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+    .driving-cta .driving-offer,
+    .driving-cta .driving-video {
+        text-align: center;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 11
+	----------------------------------------------------------------------------- */
+    
+    #header-style02.header-style11 nav.navbar {
+        margin-right: -15px;
+        margin-top: -100px;
+    }
+    .home11 {
+        padding: 50px 0;
+    }
+    .home11 .content-left {
+        padding: 0 15px 50px 15px;
+    }
+    .home11 .content-left ul li a.home-btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .home11 .content-left ul li a.video-iframe span:first-child {
+        height: 55px;
+        width: 55px;
+    }
+    .home11 .content-left ul li a.video-iframe span:last-child {
+        font-size: 17px;
+    }
+    .course11-categories .category-blocks a.va-btn,
+    .courses-11 .course11-blocks a.va-btn,
+    .events11 .events-list a.va-btn,
+    .blog11 .blog11-contents a.va-btn,
+    .testimonial08 .testimonial-wrapper a.va-btn {
+        position: static;
+        margin-bottom: 30px;
+    }
+    .events11 .events-list .event-single-row .event-day::before {
+        content: none;
+    }
+    .events11 .events-list .event-single-row .event-day {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+    .events11 .events-list .event-single-row .event-meta .event-time {
+        margin-top: 30px;
+        padding-left: 15px;
+        text-align: center;
+    }
+    .section-header11 h2 {
+        line-height: 45px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 12
+	----------------------------------------------------------------------------- */
+    
+    .blog12 .blog-boxes .blog-box-single .blog-thumb img {
+        width: 100%;
+    }
+    .blog12 .blog-boxes .blog-box-single .blog-excerpt {
+        padding: 15px 30px;
+    }
+    .footer-top-subscribe h2 {
+        margin-bottom: 15px;
+    }
+    .footer-top-subscribe form .form-group input {
+        margin-bottom: 15px;
+    }
+    /* --------------------------------------------------------------------------
+		Template Version 13
+	----------------------------------------------------------------------------- */
+    
+    .home13 .home13-contents h1 span {
+        display: inline-block;
+        position: static;
+        margin-top: 30px;
+    }
+    .about13 .about-video {
+        margin-top: 50px;
+    }
+    .benefit-section .benefit-content {
+        padding: 50px 15px;
+    }
+    .benefit-section .benefit-image .benefit-offset {
+        background: rgba(0, 0, 0, 0) url("../images/index13/02.png") no-repeat scroll left center / 100% auto;
+        left: 0;
+        width: 100%;
+    }
+    .benefit-section .benefit-image {
+        min-height: 400px;
+    }
+    .counter-cta08 .counters {
+        margin: 0 0 50px 0;
+    }
+    /* --------------------------------------------------------
+		Coming Soon
+	--------------------------------------------------------- */
+    
+    .coming-soon .cs-content .cs-countdown .countdown-timer #timer-wrapper .timer-body-block .table-cell .tab-val {
+        font-size: 40px;
+        line-height: 35px;
+    }
+    .coming-soon .cs-content .cs-countdown .countdown-timer #timer-wrapper .timer-body-block .table-cell::before {
+        top: -13px;
+        font-size: 40px;
+    }
+    .coming-soon .cs-content .cs-countdown .countdown-timer #timer-wrapper .timer-body-block .table-cell .tab-unit {
+        font-size: 18px;
+    }
+    .coming-soon .cs-content h1 {
+        font-size: 40px;
+    }
+    .coming-soon .cs-content .cs-form form input,
+    .coming-soon .cs-content .cs-form form button {
+        display: block;
+    }
+    .coming-soon .cs-content .cs-form form input {
+        width: 100%;
+        padding: 0 65px 0 15px;
+    }
+    .coming-soon .cs-content .cs-form form button {
+        width: auto;
+        margin-top: 15px;
+        padding: 0 15px;
+    }
+    .container-custom {
+        width: 100%;
+    }
+    /* --------------------------------------------------------
+		Kindergarten Version 02
+	--------------------------------------------------------- */
+    
+    .information-middle .info-content {
+        padding: 50px 15px 0 15px;
+    }
+    .courses-kindergarten2 .courses-wrapper .course-single-box .course-single-inner .course-image {
+        padding-right: 15px;
+    }
+    .courses-kindergarten2 .courses-wrapper .course-single-box .course-single-inner .course-image figure img {
+        width: 100%;
+    }
+    .courses-kindergarten2 .courses-wrapper .course-single-box .course-single-inner .course-info {
+        padding: 20px 35px 20px 35px;
+    }
+    .section-header-kg h2 {
+        line-height: 40px;
+        font-size: 30px;
+    }
+    .info-counter .counter-boxes .counter-single {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    .info-counter .counter-boxes .counter-single .counter-data {
+        margin-top: 25px;
+    }
+    .kindergarten-gallery .gallery-wrapper .gallery-box {
+        width: 100%;
+    }
+    .kg-teachers .kg-teachers-wrapper .teacher-single-inner figure img {
+        width: 100%;
+    }
+    .kg-cta p {
+        text-align: center;
+    }
+    .kg-cta .col-sm-4 {
+        text-align: center;
+    }
+    .kg-cta .col-sm-4 a {
+        margin-top: 30px;
+    }
+    /* --------------------------------------------------------
+		Blog 01
+	--------------------------------------------------------- */
+    
+    .blog-wrapper .blog-list-inner .blog-single .blog-details .post-date {
+        margin-bottom: 20px;
+    }
+    .blog-wrapper .blog-list-inner .blog-single .blog-thumb iframe {
+        height: auto;
+        width: 100%;
+    }
+    .blog-pagination {
+        margin-bottom: 100px;
+    }
+	.tp-caption.sfr.font-extra-bold.tp-resizeme.letter-space-4, .tp-caption.font-lora.sfb.tp-resizeme.letter-space-5, .tp-caption.lfb.tp-resizeme {
+		margin-left: 15px !important;
+	}
+	.slider .slider-bottom-boxes {
+		position: static;
+	}
+	.slider .slider-bottom-blocks {
+		bottom: 0;
+		position: static;
+	}
+	.about.about05 {
+		padding: 100px 0;
+	}
+	.about.about05 .about-image01, .about.about05 .about-image02 {
+		position: static;
+	}
+}
