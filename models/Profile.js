@@ -29,18 +29,16 @@ const profileSchema = mongoose.Schema({
                 type: Number,
                 required: true
             },
-            type:{
+            status:{
                 type: String,
             },
-
-            to: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'user'
+            message:{
+                type: String
             },
-            
-            date: {
+
+            paid_at: {
                 type: Date,
-                default: Date.now
+                
                 
             }
         },

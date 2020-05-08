@@ -3,6 +3,7 @@ import customerReducer from './customer';
 import alert from './alert'
 import auth from './auth'
 import profile from './profile'
+import transaction from './transaction'
 
 
 export default combineReducers({
@@ -11,3 +12,5 @@ export default combineReducers({
   auth,
   profile
 })
+
+

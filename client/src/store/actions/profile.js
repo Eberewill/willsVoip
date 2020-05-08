@@ -7,8 +7,12 @@ import{
     PROFILE_ERRORS,
     UPDATE_PROFILE,
     CLEAR_PROFILE,
+    TRANSACTION_SUCCESS,
+    TRANSACTION_FAIL
+    
     
 } from '../actions/constants';
+import { Types } from 'mongoose';
 
 //Get Current Users Profile
 
@@ -103,41 +107,83 @@ export const createProfile = (FormData,
         })
     }
 }
-//add Experence
+//payment
+export const verifyPayment = (reference, history) => async (dispatch) => {
+    var paystackSec = "sk_test_5a769a944da74a086ebbd5282cada3db3ab26166";
 
-export const makeTransaction = (PayData, history) => async dispatch => {
+    const config = {
+        headers : { Authorization: ` Bearer ${[paystackSec]}`,
+        'Content-Types': 'application/json'
+     }
+    }
+    const uri = ` https://api.paystack.co/transaction/verify/${reference}`;
     try {
-        const config = {
-            headers: {
-                'Content-Types': 'application/json'
-            }
-        }
-        const res = await axios.put('/api/transactions', PayData, config)
+      const res = await axios.get(uri, config);
+      const {
+        status,
+        message,
+        data: {
+          amount,
+          paid_at,
+          customer: { email },
+        },
+      } = res.data;
 
-        dispatch({
-            type: UPDATE_PROFILE,
-            payload: res.data
-        });
-        dispatch(setAlert( 'Payment successfull', 'success'));        
-            history.push('/dashboard');
-        
-
+      dispatch({
+        type: TRANSACTION_SUCCESS,
+        payload: {status,message,amount,paid_at,email},
+       });
+       dispatch(udpateAccount(amount, paid_at,status, message,email))
+      dispatch(setAlert("Payment successfull", "success"));
+      history.push("/dashboard");
     } catch (err) {
+      const errors = err.message;
+      if (errors) {
+        console.error(errors);
+        // errors.forEach(error => dispatch(setAlert(error.msg, 'danger')))
+      }
+      dispatch({
+        type: TRANSACTION_FAIL,
+        payload: { msg: err.response.status, status: err.response.status },
+      });
+    }
+  };
+  
+  export const udpateAccount = (amount, paid_at, status, message, email) => async dispatch =>{
+      try {
+        const config ={
+            headers:{
+                'Content-Types': 'application/json',
+                'x-auth-token' : localStorage.getItem('token')
+            }
+        }  
+
+       const body = {amount,paid_at,status, message, email};
+            
+
+        const res = await axios.post('/api/profile/ballance', body, config)
+
+
+      } catch (err) {
         const errors = err.response.data.errors;
         if(errors){
             errors.forEach(error => dispatch(setAlert(error.msg, 'danger')))
-        }
-        dispatch({
-            type: PROFILE_ERRORS,
+
+        }dispatch({
+            type: TRANSACTION_FAIL,
             payload: {msg: err.response.statusText, status: err.response.status}
         })
-    }
-}
+      }
 
+  }
+
+
+
+//add Experence
 /*** 
 
 //add Education
-export const addEducation = (FormData, history) => async dispatch => {
+export const addtransaction = (FormData, history) => async dispatch => {
     try {
         const config = {
             headers: {

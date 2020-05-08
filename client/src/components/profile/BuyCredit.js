@@ -1,14 +1,14 @@
 import React, { useEffect, Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getCurrentProfile } from "../../store/actions/profile";
+import { getCurrentProfile, verifyPayment } from "../../store/actions/profile";
 import { Card, Form } from "semantic-ui-react";
 import Spinner from "../layout/Spinner";
 import { Message, Button, Input, Label } from "semantic-ui-react";
 import  cardpay from '../../components/images/card-pay.png'
 import { setAlert} from '../../store/actions/alert'
 
-const BuyCredit = ({ setAlert,
+const BuyCredit = ({ verifyPayment, setAlert,
   getCurrentProfile,
   auth: { user, email },
   profile: { profile, loading },
@@ -19,7 +19,7 @@ const BuyCredit = ({ setAlert,
 
   
 
-  function payWithPaystack(amount, callback){
+  function payWithPaystack(amount){
     var handler = window.PaystackPop.setup({
       key: "pk_test_844eaa22b8ac7b8a090cb56488d47e311bb564c2",
       email: `${user.email}`,
@@ -36,10 +36,7 @@ const BuyCredit = ({ setAlert,
          ]
       },
       callback: function(response){
-
-        alert('success. transaction ref is ' + response.reference);
-        //  console.log(response);
-        
+        verifyPayment(response.reference)
           
       },
       onClose: function(){
@@ -63,9 +60,7 @@ setFormData({...formData, [e.target.name]: e.target.value});
 
   const onSubmit =  async e => {
     e.preventDefault();
-    if(!amount){
-      setAlert("enter Amount", 'danger')
-    }
+    
         payWithPaystack(amount)
     }
 
@@ -113,12 +108,16 @@ BuyCredit.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
+  transaction: PropTypes.object.isRequired,
   setAlert: PropTypes.func.isRequired,
+  verifyPayment: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
   profile: state.profile,
+  transaction: state.transaction,
+  loading: state.loading
 });
 
-export default connect(mapStateToProps, { getCurrentProfile, setAlert })(BuyCredit);
+export default connect(mapStateToProps, { getCurrentProfile, setAlert, verifyPayment })(BuyCredit);

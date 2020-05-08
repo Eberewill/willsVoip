@@ -4,10 +4,13 @@ import {
     CLEAR_PROFILE,
     UPDATE_PROFILE,
     GET_PROFILES,
+    TRANSACTION_SUCCESS,
+    TRANSACTION_FAIL
    } from "../actions/constants";
 
 const initialState = {
    profile: null,
+   transaction: {},
    profiles: [],
    loading: true,
    errors:{}
@@ -24,12 +27,25 @@ export default function ( state = initialState, action){
            profile: payload,
            loading: false
        }
+       case TRANSACTION_SUCCESS:
+       return{
+        ...state,
+        transaction: payload,
+        UPDATE_PROFILE
+    }
        case GET_PROFILES:
            return{
                ...state,
                profiles: payload,
                loading: false
            }
+        case TRANSACTION_FAIL:
+            return{
+                ...state,
+                error: payload
+
+            }
+           
        case PROFILE_ERRORS:
        return{
            ...state,
