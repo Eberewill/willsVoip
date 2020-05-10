@@ -81,29 +81,29 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout, profile }) => {
                           </a>
                         </li>
                         <li className="mega-menu dropdown">
-                          <a href="dialpad.html">
+                         <Link to="/dailpad">
                             <img
                               src={dialpad}
                               width="116"
                               height="107"
                               alt="img"
                             ></img>
-                          </a>
+                          </Link>
                         </li>
                         <li className="dropdown">
-                          <a href="dialpad.html">
+                          <Link to="/recent">
                             <img src={recent} width="116" height="107" />
-                          </a>
+                          </Link>
                         </li>
                         <li className="dropdown">
-                          <a href="chat.html">
+                          <Link to="/contacts">
                             <img
                               src={contact}
                               width="116"
                               height="107"
                               alt="img"
                             />{" "}
-                          </a>
+                         </Link>
                         </li>
                           {profile !== null ?  (
                             <><li className="dropdown">

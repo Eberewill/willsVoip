@@ -108,16 +108,17 @@ export const createProfile = (FormData,
     }
 }
 //payment
-export const verifyPayment = (reference, history) => async (dispatch) => {
+export const verifyPayment = (reference, history) => async dispatch => {
     var paystackSec = "sk_test_5a769a944da74a086ebbd5282cada3db3ab26166";
 
-    const config = {
-        headers : { Authorization: ` Bearer ${[paystackSec]}`,
-        'Content-Types': 'application/json'
-     }
-    }
-    const uri = ` https://api.paystack.co/transaction/verify/${reference}`;
-    try {
+     try {
+        const config = {
+            headers : { Authorization: ` Bearer ${[paystackSec]}`,
+            'Content-Types': 'application/json'
+         }
+        }
+        const uri = `https://api.paystack.co/transaction/verify/${reference}`;
+       
       const res = await axios.get(uri, config);
       const {
         status,

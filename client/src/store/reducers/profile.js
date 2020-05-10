@@ -10,7 +10,8 @@ import {
 
 const initialState = {
    profile: null,
-   transaction: {},
+   transactions: [],
+   contacts:[],
    profiles: [],
    loading: true,
    errors:{}

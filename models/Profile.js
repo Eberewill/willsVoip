@@ -44,6 +44,26 @@ const profileSchema = mongoose.Schema({
         },
     
     ],
+    contacts:
+    [
+        {
+            
+            name: {
+                type: String,
+                required: true
+            },
+            phone:{
+                type: String,
+            },
+
+            created: {
+                type: Date,
+                
+                
+            }
+        },
+    
+    ],
     
     date : {
         type: Date,

@@ -14,7 +14,10 @@ import UserProfile from './components/profile/UserProfile'
 import FriendInviter from './components/inviteFriend/FriendInviter'
 import ProfileBallance from './components/profile/ProfileBallance'
 import Buycredit from './components/profile/BuyCredit'
+import Contacts from './components/contact/Contacts'
+import Recent from './components/recent/Recent'
 
+import DailPad from './components/dailer/Dailer'
 //redux
 import {Provider} from 'react-redux';
 import store from './store/index'
@@ -45,9 +48,11 @@ const App = ()=>{
     
     <Route exact path='/login' component={Login}/>
     <Route exact path='/register' component={Register}/>
-
-   
     <PrivateRoute exact path ='/dashboard' component={Dashboard}/>
+    
+    <PrivateRoute exact path ='/contacts' component={Contacts}/>
+    <PrivateRoute exact path ='/dailpad' component={DailPad}/>
+    <PrivateRoute exact path ='/recent' component={Recent}/>
     <PrivateRoute exact path ='/createprofile' component={CreateProfile}/>
     <PrivateRoute exact path ='/editprofile' component={EditProfile}/>
     <PrivateRoute exact path ='/userprofile' component={UserProfile}/>

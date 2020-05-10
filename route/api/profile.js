@@ -139,29 +139,88 @@ router.delete("/", auth, async (req, res) => {
   }
 });
 
+router.put("/ballance", [auth], async (req, res) => {
+  const { amount, paid_at, status, email } = req.body;
+  try {
+    //get current userProfile and increment the new amount
+    let profile = await Profile.findOneAndUpdate(
+      { user: req.user.id },
+      { $inc: { ballance: amount } }
+    );
 
+    const newTransaction = { amount, status, message, paid_at };
+    profile.transaction.unshift(newTransaction);
+    await profile.save();
 
-router.put('/ballance',[ auth], 
-async (req, res)=>{
-
-    const { amount, paid_at, status, email } = req.body;
-     try {
-        //get current userProfile and increment the new amount
-       let profile = await Profile.findOneAndUpdate({user: req.user.id}, { $inc: {ballance : amount}})
-       
-       const newTransaction = { amount, status, message, paid_at}
-         profile.transaction.unshift(newTransaction)
-        await profile.save();
-
-        //SEND REPONSE
-        res.json(profile)
-
-        
-    } catch (error) {
-        console.error(error)
-        res.status(500).send('server error');
-    }
+    //SEND REPONSE
+    res.json(profile);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("server error");
+  }
 });
+
+//@ put api/profile/contact
+//@ desc add profile contact
+//@ access Private
+
+router.put(
+  "/contact",
+  [
+    auth,
+    [
+      check("name", "Name is required").not().isEmpty(),
+      check("phone", "Phone is required").not().isEmpty(),
+    ],
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).send({ errors: errors.array() });
+    }
+
+    const { name, phone } = req.body;
+    const newContact = { name, phone };
+
+    try {
+      const profile = await Profile.findOne({ user: req.user.id}) 
+
+      profile.contacts.unshift(newContact)
+
+      await profile.save()
+
+      res.json(profile)
+    } catch (err) {
+      console.error(err.message)
+        res.status(500).send('server Error')
+      
+    }
+  }
+);
+
+
+//@ get api/profile/contact
+//@ desc add profile contact
+//@ access Private
+
+router.get(
+  "/contact/:id",
+  [auth],
+  async (req, res) => {
+    
+    try {
+      const profile = await Profile.findOne({ user: req.user.id}) 
+
+      
+
+      res.json(profile.contacts)
+    } catch (err) {
+      console.error(err.message)
+        res.status(500).send('server Error')
+      
+    }
+  }
+);
 
 // @route Put api/profile/experience
 // @desc  add profile experience

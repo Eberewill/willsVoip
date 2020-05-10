@@ -36,7 +36,8 @@ const BuyCredit = ({ verifyPayment, setAlert,
          ]
       },
       callback: function(response){
-        verifyPayment(response.reference)
+        //verifyPayment(response.reference)
+        verifyPayment()
           
       },
       onClose: function(){
