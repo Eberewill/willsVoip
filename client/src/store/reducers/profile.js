@@ -10,8 +10,6 @@ import {
 
 const initialState = {
    profile: null,
-   transactions: [],
-   contacts:[],
    profiles: [],
    loading: true,
    errors:{}
@@ -28,24 +26,15 @@ export default function ( state = initialState, action){
            profile: payload,
            loading: false
        }
-       case TRANSACTION_SUCCESS:
-       return{
-        ...state,
-        transaction: payload,
-        UPDATE_PROFILE
-    }
+   
+    
        case GET_PROFILES:
            return{
                ...state,
                profiles: payload,
                loading: false
            }
-        case TRANSACTION_FAIL:
-            return{
-                ...state,
-                error: payload
-
-            }
+       
            
        case PROFILE_ERRORS:
        return{

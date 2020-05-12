@@ -36,7 +36,7 @@ router.post(
     [
       check("firstname", "Status is required").not().isEmpty(),
       check("lastname", "Status is required").not().isEmpty(),
-      check("phonenumber", "Skill is required").not().isEmpty(),
+    
     ],
   ],
   async (req, res) => {
@@ -140,7 +140,7 @@ router.delete("/", auth, async (req, res) => {
 });
 
 router.put("/ballance", [auth], async (req, res) => {
-  const { amount, paid_at, status, email } = req.body;
+  const { amount, paid_at, status, id, message } = req.body;
   try {
     //get current userProfile and increment the new amount
     let profile = await Profile.findOneAndUpdate(
@@ -148,8 +148,8 @@ router.put("/ballance", [auth], async (req, res) => {
       { $inc: { ballance: amount } }
     );
 
-    const newTransaction = { amount, status, message, paid_at };
-    profile.transaction.unshift(newTransaction);
+    const newTransaction = { amount, status, paid_at, message,id };
+    profile.transactions.unshift(newTransaction);
     await profile.save();
 
     //SEND REPONSE
@@ -204,16 +204,31 @@ router.put(
 //@ access Private
 
 router.get(
-  "/contact/:id",
-  [auth],
+  "/contact",
+  [
+    auth,
+    [
+      check("name", "Name is required").not().isEmpty(),
+      check("phone", "Phone is required").not().isEmpty(),
+    ],
+  ],
   async (req, res) => {
-    
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).send({ errors: errors.array() });
+    }
+
+    const { name, phone } = req.body;
+    const newContact = { name, phone };
+
     try {
       const profile = await Profile.findOne({ user: req.user.id}) 
 
-      
+      profile.contacts.unshift(newContact)
 
-      res.json(profile.contacts)
+      await profile.save()
+
+      res.json(profile)
     } catch (err) {
       console.error(err.message)
         res.status(500).send('server Error')

@@ -19,11 +19,15 @@ const profileSchema = mongoose.Schema({
     },
     ballance:{
                 type: Number,
-                default: 0,
+                default: 10,
             },
     transactions:
     [
         {
+            id: {
+                type: Number,
+                
+            },
             
             amount: {
                 type: Number,
@@ -54,10 +58,12 @@ const profileSchema = mongoose.Schema({
             },
             phone:{
                 type: String,
+                require: true
             },
 
             created: {
                 type: Date,
+                default: Date.now
                 
                 
             }

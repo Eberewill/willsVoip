@@ -107,8 +107,118 @@ export const createProfile = (FormData,
         })
     }
 }
+
+   //add contact 
+export const addContact =( FormData) =>async dispatch =>{
+
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    try {
+       const res =  await axios.put('/api/profile/contact', FormData, config);
+
+        dispatch({
+            type: UPDATE_PROFILE,
+            payload: res.data
+        })
+        dispatch(setAlert('Contact Created', 'success'))
+     
+       
+    } catch (err) {
+        dispatch({
+            type: PROFILE_ERRORS,
+            payload: {msg: err.response.statusText, status: err.response.status}
+        })
+        
+    }
+}
+
+//payment verify
+
+export const verify =(reference) =>async dispatch =>{ 
+ 
+    try {  const response = await fetch(`https://api.paystack.co/transaction/verify/${reference}`, {
+      method: 'GET',
+      
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: 'Bearer sk_test_5a769a944da74a086ebbd5282cada3db3ab26166'
+
+      }
+    });
+
+    let data = await response.json()
+    let {message, data:{ id, status, amount, paid_at}} = data
+    const usefulData = {id, status, amount, paid_at,message}
+        dispatch(updateTransaction(usefulData))
+     return  usefulData
+    
+   
+  //const config = {
+       // headers: {
+          //  Authorization: 'Bearer sk_test_5a769a944da74a086ebbd5282cada3db3ab26166'
+      //  }
+   // }
+
+    
+     //  const res =  await axios.get(`https://api.paystack.co/transaction/verify/${reference}`, config);
+       
+      // dispatch(setAlert(`Payment status ${res.data.status}`, 'success'))
+
+        //alert(`Payment varified ${ data.message}`)
+       // dispatch({
+           // type: UPDATE_PROFILE,
+           // payload: res.data
+       // })
+        //dispatch(setAlert('Contact Created', 'success'))
+       // history.push('/contacts');
+       
+    } catch (err) {
+        alert("error in t10ry catch")
+        dispatch({
+            type: PROFILE_ERRORS,
+            payload: {err}
+        })
+        
+    }
+}
+ 
+   
 //payment
-export const verifyPayment = (reference, history) => async dispatch => {
+
+
+export const updateTransaction = (Data) =>async dispatch =>{
+
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    try {
+       const res =  await axios.put('/api/profile/ballance', Data, config);
+
+        dispatch({
+            type: UPDATE_PROFILE,
+            payload: res.data
+        })
+        dispatch(setAlert('Transaction updated', 'success'))
+
+       
+    } catch (err) {
+        dispatch({
+            type: PROFILE_ERRORS,
+            payload: {msg: err.response.statusText, status: err.response.status}
+        })
+        
+    }
+}
+ /**
+   
+export const verifyPayment = (reference) => async dispatch => {
     var paystackSec = "sk_test_5a769a944da74a086ebbd5282cada3db3ab26166";
 
      try {
@@ -149,7 +259,7 @@ export const verifyPayment = (reference, history) => async dispatch => {
       });
     }
   };
-  
+
   export const udpateAccount = (amount, paid_at, status, message, email) => async dispatch =>{
       try {
         const config ={
@@ -176,8 +286,9 @@ export const verifyPayment = (reference, history) => async dispatch => {
         })
       }
 
-  }
+  } */
 
+ 
 
 
 //add Experence

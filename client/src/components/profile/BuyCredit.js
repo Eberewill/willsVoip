@@ -1,14 +1,15 @@
 import React, { useEffect, Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getCurrentProfile, verifyPayment } from "../../store/actions/profile";
+import { Redirect } from 'react-router-dom';
+import { getCurrentProfile, verify, updateTransaction } from "../../store/actions/profile";
 import { Card, Form } from "semantic-ui-react";
 import Spinner from "../layout/Spinner";
 import { Message, Button, Input, Label } from "semantic-ui-react";
 import  cardpay from '../../components/images/card-pay.png'
 import { setAlert} from '../../store/actions/alert'
 
-const BuyCredit = ({ verifyPayment, setAlert,
+const BuyCredit = ({setAlert,verify,updateTransaction,
   getCurrentProfile,
   auth: { user, email },
   profile: { profile, loading },
@@ -25,7 +26,7 @@ const BuyCredit = ({ verifyPayment, setAlert,
       email: `${user.email}`,
       amount: amount*100,
       currency: "NGN",
-     // ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+  
       metadata: {
          custom_fields: [
             {
@@ -36,8 +37,11 @@ const BuyCredit = ({ verifyPayment, setAlert,
          ]
       },
       callback: function(response){
-        //verifyPayment(response.reference)
-        verifyPayment()
+        //verifyPayment()
+        verify(response.reference)
+        .then(usefulData  => alert(`Your Transaction of ${usefulData.amount} was ${usefulData.message}`) )
+        return <Redirect to='/ballance' />
+        ; 
           
       },
       onClose: function(){
@@ -109,9 +113,9 @@ BuyCredit.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
-  transaction: PropTypes.object.isRequired,
   setAlert: PropTypes.func.isRequired,
-  verifyPayment: PropTypes.func.isRequired
+  verify: PropTypes.func.isRequired,
+  updateTransaction: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
@@ -121,4 +125,4 @@ const mapStateToProps = (state) => ({
   loading: state.loading
 });
 
-export default connect(mapStateToProps, { getCurrentProfile, setAlert, verifyPayment })(BuyCredit);
+export default connect(mapStateToProps, { getCurrentProfile, setAlert,updateTransaction, verify})(BuyCredit);
