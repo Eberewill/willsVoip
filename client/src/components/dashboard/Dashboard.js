@@ -94,17 +94,17 @@ const Dashboard = ({
                     <Card>
                       <div className="row">
                         <div className="col-md-2 ">
-                          <a href="balance-transfer.html">
+                          <Link to="/transfer">
                             <img src="images/balance-transfer.png" alt="" />
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </Card>
                     <Card>
                       <div className="col-md-2 ">
-                        <a href="transfer-history.html">
+                        <Link to="/transferhistory">
                           <img src="images/transfer-history.png" alt="" />
-                        </a>
+                        </Link>
                       </div>
                     </Card>
                   </Card.Group>

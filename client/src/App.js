@@ -16,6 +16,8 @@ import ProfileBallance from './components/profile/ProfileBallance'
 import Buycredit from './components/profile/BuyCredit'
 import Contacts from './components/contact/Contacts'
 import Recent from './components/recent/Recent'
+import BallanceTransfer from './components/profile/BallanceTransfer'
+import TransferHistory from './components/transferHistory/TransferHistory'
 
 import DailPad from './components/dailer/Dailer'
 //redux
@@ -53,6 +55,10 @@ const App = ()=>{
     <PrivateRoute exact path ='/contacts' component={Contacts}/>
     <PrivateRoute exact path ='/dailpad' component={DailPad}/>
     <PrivateRoute exact path ='/recent' component={Recent}/>
+    
+    <PrivateRoute exact path ='/transferhistory' component={TransferHistory}/>
+
+    <PrivateRoute exact path ='/transfer' component={BallanceTransfer}/>
     <PrivateRoute exact path ='/createprofile' component={CreateProfile}/>
     <PrivateRoute exact path ='/editprofile' component={EditProfile}/>
     <PrivateRoute exact path ='/userprofile' component={UserProfile}/>

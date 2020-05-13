@@ -1,66 +1,198 @@
-import axios from 'axios'
-import {setAlert} from './alert' 
+import axios from "axios";
+import { setAlert } from "./alert";
 
-import{
-    GET_PROFILE,
-    GET_PROFILES,
-    PROFILE_ERRORS,
-    UPDATE_PROFILE,
-    CLEAR_PROFILE,
-    TRANSACTION_SUCCESS,
-    TRANSACTION_FAIL
-    
-    
-} from '../actions/constants';
-import { Types } from 'mongoose';
+import {
+  GET_PROFILE,
+  GET_PROFILES,
+  PROFILE_ERRORS,
+  UPDATE_PROFILE,
+  CLEAR_PROFILE,
+  GET_TPROFILES,
+} from "../actions/constants";
+import { Types } from "mongoose";
 
 //Get Current Users Profile
 
-export const getCurrentProfile = () => async dispatch =>{
-    
-    try {
-        const res = await axios.get('/api/profile/me')
+export const getCurrentProfile = () => async (dispatch) => {
+  try {
+    const res = await axios.get("/api/profile/me");
 
-        dispatch({
-            type: GET_PROFILE,
-            payload: res.data
-        })
-    } catch (err) {
-        dispatch({
-            type: PROFILE_ERRORS,
-            payload: {msg: err.response.statusText, status: err.response.status}
-        })
-    }
+    dispatch({
+      type: GET_PROFILE,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
 };
 
-//get all profile 
+//get all profile
 
-export const getProfiles = () => async dispatch =>{
-    dispatch({type: CLEAR_PROFILE})
-    try {
-        const res = await axios.get('/api/profile')-
-
-        dispatch({
-            type: GET_PROFILES,
-            payload: res.data
-        })
-    } catch (err) {
-        dispatch({
-            type: PROFILE_ERRORS,
-            payload: {msg: err.response.statusText, status: err.response.status}
-        })
-    }
+export const getProfiles = () => async (dispatch) => {
+  dispatch({ type: CLEAR_PROFILE });
+  try {
+    const res =
+      (await axios.get("/api/profile")) -
+      dispatch({
+        type: GET_PROFILES,
+        payload: res.data,
+      });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
 };
 
-//get profile By ID 
+//get profile By ID
 
-export const getProfileById = userId => async dispatch =>{
+export const getProfileById = (userId) => async (dispatch) => {
+  try {
+    const res = await axios.get(`/api/profile/${userId}`);
+
+    dispatch({
+      type: GET_PROFILE,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+//Create or update Profile
+
+export const createProfile = (FormData, history, edit = false) => async (
+  dispatch
+) => {
+  try {
+    const config = {
+      headers: {
+        "Content-Types": "application/json",
+      },
+    };
+    const res = await axios.post("/api/profile", FormData, config);
+
+    dispatch({
+      type: GET_PROFILE,
+      payload: res.data,
+    });
+    dispatch(setAlert(edit ? "Profile Updated" : "Profile Created", "success"));
+
+    if (!edit) {
+      history.push("/dashboard");
+    }
+  } catch (err) {
+    const errors = err.response.data.errors;
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
+    }
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+//add contact
+export const addContact = (FormData) => async (dispatch) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const res = await axios.put("/api/profile/contact", FormData, config);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data,
+    });
+    dispatch(setAlert("Contact Created", "success"));
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+//payment verify
+
+export const verify = (reference) => async (dispatch) => {
+  try {
+    const response = await fetch(
+      `https://api.paystack.co/transaction/verify/${reference}`,
+      {
+        method: "GET",
+
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization:
+            "Bearer sk_test_5a769a944da74a086ebbd5282cada3db3ab26166",
+        },
+      }
+    );
+
+    let data = await response.json();
+    let {
+      message,
+      data: { id, status, amount, paid_at },
+    } = data;
+    const usefulData = { id, status, amount, paid_at, message };
+    dispatch(updateTransaction(usefulData));
+    return usefulData;
+  } catch (err) {
+    alert("error in t10ry catch");
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { err },
+    });
+  }
+};
+
+//payment update to database
+
+export const updateTransaction = (Data) => async (dispatch) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const res = await axios.put("/api/profile/ballance", Data, config);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data,
+    });
+    dispatch(setAlert("Transaction updated", "success"));
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERRORS,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+
+// getting profileBy Id on for transfer
+
+export const getProfile = userId => async dispatch =>{
     
     try {
         const res = await axios.get(`/api/profile/${userId}`)
 
         dispatch({
-            type: GET_PROFILE,
+            type: GET_TPROFILES,
             payload: res.data
         })
     } catch (err) {
@@ -71,152 +203,30 @@ export const getProfileById = userId => async dispatch =>{
     }
 };
 
-
-//Create or update Profile
-
-export const createProfile = (FormData,
-     history,
-      edit = false
-      ) => async dispatch =>{
-    try {
-        const config = {
-            headers: {
-                'Content-Types': 'application/json'
-            }
-        }
-        const res = await axios.post('/api/profile', FormData, config)
-
-        dispatch({
-            type: GET_PROFILE,
-            payload: res.data
-        });
-        dispatch(setAlert(edit? 'Profile Updated': 'Profile Created', 'success'));
-
-        if(!edit) {
-            history.push('/dashboard');
-        }
-
-    } catch (err) {
-        const errors = err.response.data.errors;
-        if(errors){
-            errors.forEach(error => dispatch(setAlert(error.msg, 'danger')))
-        }
-        dispatch({
-            type: PROFILE_ERRORS,
-            payload: {msg: err.response.statusText, status: err.response.status}
-        })
-    }
-}
-
-   //add contact 
-export const addContact =( FormData) =>async dispatch =>{
-
+//Transfer Implementation after confirm
+export const updateTransfer = (amount, t_user) => async (dispatch) => {
     const config = {
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }
-
-    try {
-       const res =  await axios.put('/api/profile/contact', FormData, config);
-
-        dispatch({
-            type: UPDATE_PROFILE,
-            payload: res.data
-        })
-        dispatch(setAlert('Contact Created', 'success'))
-     
-       
-    } catch (err) {
-        dispatch({
-            type: PROFILE_ERRORS,
-            payload: {msg: err.response.statusText, status: err.response.status}
-        })
-        
-    }
-}
-
-//payment verify
-
-export const verify =(reference) =>async dispatch =>{ 
- 
-    try {  const response = await fetch(`https://api.paystack.co/transaction/verify/${reference}`, {
-      method: 'GET',
-      
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
-        Authorization: 'Bearer sk_test_5a769a944da74a086ebbd5282cada3db3ab26166'
-
-      }
-    });
-
-    let data = await response.json()
-    let {message, data:{ id, status, amount, paid_at}} = data
-    const usefulData = {id, status, amount, paid_at,message}
-        dispatch(updateTransaction(usefulData))
-     return  usefulData
-    
-   
-  //const config = {
-       // headers: {
-          //  Authorization: 'Bearer sk_test_5a769a944da74a086ebbd5282cada3db3ab26166'
-      //  }
-   // }
-
-    
-     //  const res =  await axios.get(`https://api.paystack.co/transaction/verify/${reference}`, config);
-       
-      // dispatch(setAlert(`Payment status ${res.data.status}`, 'success'))
-
-        //alert(`Payment varified ${ data.message}`)
-       // dispatch({
-           // type: UPDATE_PROFILE,
-           // payload: res.data
-       // })
-        //dispatch(setAlert('Contact Created', 'success'))
-       // history.push('/contacts');
-       
-    } catch (err) {
-        alert("error in t10ry catch")
-        dispatch({
-            type: PROFILE_ERRORS,
-            payload: {err}
-        })
-        
-    }
-}
- 
-   
-//payment
-
-
-export const updateTransaction = (Data) =>async dispatch =>{
-
-    const config = {
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }
-
+        "Content-Type": "application/json",
+      },
+    };
+  const body = {amount, t_user }
     try {
-       const res =  await axios.put('/api/profile/ballance', Data, config);
-
-        dispatch({
-            type: UPDATE_PROFILE,
-            payload: res.data
-        })
-        dispatch(setAlert('Transaction updated', 'success'))
-
-       
+      const res = await axios.put("/api/profile/transfer", body, config);
+  
+      dispatch({
+        type: UPDATE_PROFILE,
+        payload: res.data,
+      });
+      dispatch(setAlert("Transfer was Sucessfull", "success"));
     } catch (err) {
-        dispatch({
-            type: PROFILE_ERRORS,
-            payload: {msg: err.response.statusText, status: err.response.status}
-        })
-        
+      dispatch({
+        type: PROFILE_ERRORS,
+        payload: { msg: err.response.statusText, status: err.response.status },
+      });
     }
-}
- /**
+  };
+/**
    
 export const verifyPayment = (reference) => async dispatch => {
     var paystackSec = "sk_test_5a769a944da74a086ebbd5282cada3db3ab26166";
@@ -287,9 +297,6 @@ export const verifyPayment = (reference) => async dispatch => {
       }
 
   } */
-
- 
-
 
 //add Experence
 /*** 

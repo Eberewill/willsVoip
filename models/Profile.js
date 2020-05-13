@@ -48,6 +48,33 @@ const profileSchema = mongoose.Schema({
         },
     
     ],
+    transfers:
+    [
+        {            
+            amount: {
+                type: Number,
+                required: true
+            },
+            status:{
+                type: String,
+                default: "Success"
+            },
+            type:{
+                type: String
+            },
+            t_user:{
+                type: String
+            },
+
+            date: {
+                type: Date,
+                default: Date.now
+                
+                
+            }
+        },
+    
+    ],
     contacts:
     [
         {

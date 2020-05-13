@@ -139,6 +139,8 @@ router.delete("/", auth, async (req, res) => {
   }
 });
 
+//ballance and Transaction Update rout
+
 router.put("/ballance", [auth], async (req, res) => {
   const { amount, paid_at, status, id, message } = req.body;
   try {
@@ -159,6 +161,41 @@ router.put("/ballance", [auth], async (req, res) => {
     res.status(500).send("server error");
   }
 });
+
+//Transfers
+router.put("/transfer", [auth], async (req, res) => {
+  const { amount, t_user } = req.body;
+  try {
+    //get current userProfile and increment the new amount
+    let profile = await Profile.findOneAndUpdate(
+      { user: req.user.id },
+      { $inc: { ballance: - amount } }
+    );
+    //get the reciepient Account and increament his ballance
+   let toProfile = await Profile.findOneAndUpdate(
+      { user: t_user },
+     { $inc: { ballance: + amount } }
+    );
+    const newTransfer = { amount, t_user:req.user.id, type: "Credited" };
+    toProfile.transfers.unshift(newTransfer)
+   
+    const newDebitTransfer = {amount, t_user, type: "Debited"}
+    profile.transfers.unshift(newDebitTransfer);
+
+    await toProfile.save()
+    await profile.save();
+
+
+
+    //SEND REPONSE
+    res.json(profile);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("server error");
+  }
+});
+
+
 
 //@ put api/profile/contact
 //@ desc add profile contact

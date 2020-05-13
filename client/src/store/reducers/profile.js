@@ -4,15 +4,15 @@ import {
     CLEAR_PROFILE,
     UPDATE_PROFILE,
     GET_PROFILES,
-    TRANSACTION_SUCCESS,
-    TRANSACTION_FAIL
+    GET_TPROFILES
    } from "../actions/constants";
 
 const initialState = {
    profile: null,
    profiles: [],
    loading: true,
-   errors:{}
+   errors:{},
+   tprofile: {}
 }
 
 export default function ( state = initialState, action){
@@ -34,7 +34,13 @@ export default function ( state = initialState, action){
                profiles: payload,
                loading: false
            }
-       
+
+           case GET_TPROFILES:
+            return{
+                ...state,
+                tprofile: payload,
+                loading: false
+            }      
            
        case PROFILE_ERRORS:
        return{
