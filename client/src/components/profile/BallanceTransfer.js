@@ -52,7 +52,7 @@ const BallanceTransfer = ({
     <Step active>
       <Icon name='info' />
       <Step.Content>
-        <Step.Title>Confirm transfered</Step.Title>
+        <Step.Title>Confirm Transfer</Step.Title>
       </Step.Content>
     </Step>
   </Step.Group>

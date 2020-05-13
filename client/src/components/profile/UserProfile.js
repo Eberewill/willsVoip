@@ -2,7 +2,6 @@ import React, { useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentProfile } from "../../store/actions/profile";
-import { Card } from "semantic-ui-react";
 import Spinner from "../layout/Spinner";
 import { Tab, Button, Form, Label, Message } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -64,7 +63,10 @@ const UserProfile = ({
         </Tab.Pane>
       ),
     },
-    { menuItem: "Settings", render: () => <Tab.Pane>Profile Settings</Tab.Pane> },
+    {
+      menuItem: "Settings",
+      render: () => <Tab.Pane>Profile Settings</Tab.Pane>,
+    },
     {
       menuItem: "User Personal Code",
       render: () => (
