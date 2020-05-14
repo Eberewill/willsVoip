@@ -52,10 +52,10 @@ router.get("/vouchers", auth, async (req, res) => {
 //@desc  Get voucher by code
 // @access Private
 
-router.post("/recharge", auth, async (req, res) => {
+router.get("/recharge/:id", auth, async (req, res) => {
   try {
     //get voucher
-    const voucher = await Voucher.findOne({ code: req.body.code });
+    const voucher = await Voucher.findOne({ code: req.params.id });
     if (!voucher) {
       return res.status(404).json({ msg: "Voucher Recharge Code  not found " });
     }
@@ -67,7 +67,7 @@ router.post("/recharge", auth, async (req, res) => {
     );
     await profile.save();
 
-    res.json(voucher.amount);
+    res.json(voucher);
   } catch (err) {
     console.error(err.message);
 

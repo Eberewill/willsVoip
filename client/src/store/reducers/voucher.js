@@ -1,9 +1,14 @@
-import { VOUCHER_RECHARGED, VOUCHER_ERROR } from "../actions/constants";
+import {
+  VOUCHER_RECHARGED,
+  VOUCHER_ERROR,
+  LOADING,
+} from "../actions/constants";
 
-const initialSate = {
-  voucherAmount: null,
-  loadingcard: true,
+const initialState = {
+  voucher: {},
   errors: {},
+  load: false,
+  amount: null,
 };
 export default function (state = initialState, action) {
   const { type, payload } = action;
@@ -12,14 +17,17 @@ export default function (state = initialState, action) {
     case VOUCHER_RECHARGED:
       return {
         ...state,
+        load: false,
         voucherAmount: payload,
-        loadingcard: false,
+      };
+    case LOADING:
+      return {
+        load: payload,
       };
     case VOUCHER_ERROR:
       return {
         ...state,
         voucherAmount: null,
-        loadingcard: false,
       };
     default:
       return state;

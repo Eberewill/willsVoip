@@ -23,3 +23,4 @@ export const GET_TPROFILES = "GET_TPROFILES";
 
 export const VOUCHER_RECHARGED = "VOUCHER_RECHARGED";
 export const VOUCHER_ERROR = "VOUCHER_ERROR";
+export const LOADING = "LOADING";

@@ -1,17 +1,34 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 
-import { VOUCHER_RECHARGED, VOUCHER_ERROR } from "../actions/constants";
+import {
+  VOUCHER_RECHARGED,
+  VOUCHER_ERROR,
+  LOADING,
+} from "../actions/constants";
 
 //rechage user card
 
-export const rechargeVoulcher = (code) => async (dipatch) => {
+export const recharge = (code) => async (dispatch) => {
+  dispatch({
+    type: LOADING,
+    payload: true,
+  });
+
   try {
-    const config = {
-      headers: {
-        "Content-Types": "application/json",
-      },
-    };
-    const res = axios.post("/api/voucher/recharge", code, config);
-  } catch (error) {}
+    const res = await axios.get(`/api/voucher/recharge/${code}`);
+
+    dispatch({
+      type: VOUCHER_RECHARGED,
+      payload: res.data,
+    });
+
+    dispatch(setAlert("Voucher Was Successfully Recharged", "success"));
+  } catch (err) {
+    dispatch({
+      type: VOUCHER_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+    dispatch(setAlert("Voucher was not recharged", "danger"));
+  }
 };

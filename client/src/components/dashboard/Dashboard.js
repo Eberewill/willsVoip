@@ -47,7 +47,7 @@ const Dashboard = ({
                   <Card.Group itemsPerRow={4}>
                     <Card>
                       <div className="col-md-2 ">
-                       <Link to="/friendinvite">
+                        <Link to="/friendinvite">
                           <img src="images/invite.png" alt="" />
                         </Link>
                       </div>
@@ -61,7 +61,7 @@ const Dashboard = ({
                     </Card>
                     <Card>
                       <div className="col-md-2 ">
-                        <Link to='/ballance'>
+                        <Link to="/ballance">
                           {" "}
                           <img src="images/my-balance.png" alt="" />
                         </Link>
@@ -79,9 +79,9 @@ const Dashboard = ({
                   <Card.Group itemsPerRow={4}>
                     <Card>
                       <div className="col-md-2 ">
-                        <a href="voucher-recharge.html">
+                        <Link to="/voucher">
                           <img src="images/voucher-recharge.png" alt="" />
-                        </a>
+                        </Link>
                       </div>
                     </Card>
                     <Card>
@@ -133,7 +133,7 @@ const Dashboard = ({
                     </Card>
                     <Card>
                       <div className="col-md-2 ">
-                        <Link to='/userprofile'>
+                        <Link to="/userprofile">
                           <img src="images/update-profile.png" alt="" />
                         </Link>
                       </div>
