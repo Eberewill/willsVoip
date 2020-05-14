@@ -14,6 +14,7 @@ import UserProfile from "./components/profile/UserProfile";
 import FriendInviter from "./components/inviteFriend/FriendInviter";
 import ProfileBallance from "./components/profile/ProfileBallance";
 import Buycredit from "./components/profile/BuyCredit";
+import HomepageLayout from "./components/layout/homepageLayout/HomepageLayout";
 import Voucher from "./components/voulcher/Voucher";
 import Contacts from "./components/contact/Contacts";
 import Recent from "./components/recent/Recent";
@@ -42,6 +43,7 @@ const App = () => {
         <Fragment>
           <Nav />
           <Route exact path="/" component={Landing} />
+          <Route exact path="/home" component={HomepageLayout} />
           <Alert />
           <Switch>
             <Route exact path="/login" component={Login} />

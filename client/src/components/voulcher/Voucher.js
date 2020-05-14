@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 const Voucher = ({
   recharge,
   auth: { user },
-  voucher: { voucher, voucherAmount, load },
+  voucher: { voucher, amount, load },
 }) => {
   const [code, setCode] = useState();
   return load ? (
@@ -71,16 +71,15 @@ const Voucher = ({
                 </Grid.Column>
 
                 <Grid.Column>
-                  {!voucher ? (
+                  {voucher ? (
                     <>
                       <Segment>
                         <Message success>
                           <Message.Header>
-                            <Icon success name="sync" />
-                            Congratulations!! Your Accoun Have successfully been
-                            credited with ₦{voucherAmount.amount} You can go
-                            Navigate to your Account ballance to comfirm
-                            purchase
+                            <Icon name="sync" />
+                            Congratulations!! Your Account Have been
+                            successfully credited with ₦{voucher.amount} You can
+                            go Navigate to your ballance to comfirm purchase
                             <br />
                             <hr></hr>
                             <button className="ui icon left labeled button">

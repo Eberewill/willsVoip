@@ -5,10 +5,9 @@ import {
 } from "../actions/constants";
 
 const initialState = {
-  voucher: {},
+  voucher: null,
   errors: {},
   load: false,
-  amount: null,
 };
 export default function (state = initialState, action) {
   const { type, payload } = action;
@@ -18,7 +17,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         load: false,
-        voucherAmount: payload,
+        voucher: payload,
       };
     case LOADING:
       return {
@@ -27,7 +26,7 @@ export default function (state = initialState, action) {
     case VOUCHER_ERROR:
       return {
         ...state,
-        voucherAmount: null,
+        voucher: null,
       };
     default:
       return state;

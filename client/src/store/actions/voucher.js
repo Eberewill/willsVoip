@@ -26,6 +26,10 @@ export const recharge = (code) => async (dispatch) => {
     dispatch(setAlert("Voucher Was Successfully Recharged", "success"));
   } catch (err) {
     dispatch({
+      type: LOADING,
+      payload: false,
+    });
+    dispatch({
       type: VOUCHER_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
     });

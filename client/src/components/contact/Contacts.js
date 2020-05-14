@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentProfile } from "../../store/actions/profile";
 import ContactItem from "./ContactItem";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 import { Button, Header, Image, Modal } from "semantic-ui-react";
 
@@ -35,8 +35,12 @@ const Contacts = ({
                 <Modal.Content>
                   <ContactForm />
                 </Modal.Content>
-              </Modal>
+              </Modal>{" "}
+              <Button>
+                <Link to="/dashboard">Back</Link>
+              </Button>
             </div>
+
             <div>
               {profile.contacts.map((contact) => (
                 <ContactItem
@@ -47,14 +51,9 @@ const Contacts = ({
               ))}
             </div>
           </div>
-        </section>
-      </div>
 
-      <div>
-        {" "}
-        <Button>
-          <Link to="/dashboard">Back</Link>
-        </Button>
+          <div> </div>
+        </section>
       </div>
     </Fragment>
   );
