@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import mackbook from "./macbook.jpg";
+import banner from "./banner.png";
 import {
   Button,
   Container,
@@ -33,7 +36,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as="h1"
-      content="Imagine-a-Company"
+      content="Wills Smart Technology "
       inverted
       style={{
         fontSize: mobile ? "2em" : "4em",
@@ -44,7 +47,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as="h2"
-      content="Do whatever you want when you want to."
+      content="Complete VoIP Software Solution at one Platform."
       inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
@@ -52,7 +55,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em",
       }}
     />
-    <Button primary size="huge">
+    <Button color="green" size="huge">
       Get Started
       <Icon name="right arrow" />
     </Button>
@@ -98,15 +101,9 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a">Work</Menu.Item>
-                <Menu.Item as="a">Company</Menu.Item>
-                <Menu.Item as="a">Careers</Menu.Item>
                 <Menu.Item position="right">
                   <Button as="a" inverted={!fixed}>
-                    Log in
+                    <Link to="/login">Log in</Link>
                   </Button>
                   <Button
                     as="a"
@@ -114,7 +111,7 @@ class DesktopContainer extends Component {
                     primary={fixed}
                     style={{ marginLeft: "0.5em" }}
                   >
-                    Sign Up
+                    <Link to="/register">Sign Up</Link>
                   </Button>
                 </Menu.Item>
               </Container>
@@ -158,14 +155,14 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as="a" active>
-            Home
+          <Menu.Item as="a">
+            {" "}
+            <Link to="/register">Log In</Link>{" "}
           </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">Company</Menu.Item>
-          <Menu.Item as="a">Careers</Menu.Item>
-          <Menu.Item as="a">Log in</Menu.Item>
-          <Menu.Item as="a">Sign Up</Menu.Item>
+          <Menu.Item as="a">
+            {" "}
+            <Link to="/register">Sign Up</Link>{" "}
+          </Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -182,10 +179,15 @@ class MobileContainer extends Component {
                 </Menu.Item>
                 <Menu.Item position="right">
                   <Button as="a" inverted>
-                    Log in
+                    <Link to="/login">Log in</Link>
                   </Button>
-                  <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                    Sign Up
+                  <Button
+                    color="green"
+                    as="a"
+                    inverted
+                    style={{ marginLeft: "0.5em" }}
+                  >
+                    <Link to="/register">Sign Up</Link>
                   </Button>
                 </Menu.Item>
               </Menu>
@@ -225,56 +227,32 @@ const HomepageLayout = () => (
               We Help Companies and Companions
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              We can give your company superpowers to do things that they never
-              thought possible. Let us delight your customers and empower your
-              needs... through pure data analytics.
+              Will Smart Technology offers an amazing suite of Voice over
+              Internet Protocol (VoIP) Software that are the benchmark of
+              technical excellence. It delivers ingenious VoIP products and
+              services for PC-to-Phone, Phone-to-PC and PC-to-PC communications
+              which consist of Wills Smart VoIP Softphone, Wills Smart VoIP
+              Mobile Dialers, Wills Smart VoIP Softswitch, Wills Smart VoIP VoIP
+              Billing, Wills Smart Unified Communication, Wills Smart Gadgets,
+              Wills Smart Monetisation and many more
             </p>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              We Make Bananas That Can Dance
+              ustomized VoIP Mobile Dailing
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              Yes that's right, you thought it was the stuff of dreams, but even
-              bananas can be bioengineered.
+              We are regarded as industry leaders in digital strategy and
+              solutions, focused solely on delivering great user experiences
             </p>
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
-            <Image
-              bordered
-              rounded
-              size="large"
-              src="/images/wireframe/white-image.png"
-            />
+            <Image bordered rounded size="large" src={mackbook} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign="center">
             <Button size="huge">
-              <Link to="/dashboard">Check Them Out</Link>
+              <Link to="https://willssmartvoip.com/">Coperate Website</Link>
             </Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-
-    <Segment style={{ padding: "0em" }} vertical>
-      <Grid celled="internally" columns="equal" stackable>
-        <Grid.Row textAlign="center">
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "What a Company"
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              That is what they all say about us
-            </p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "I shouldn't have gone with their competitor."
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              <Image avatar src="/images/avatar/large/nan.jpg" />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>

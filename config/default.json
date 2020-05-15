@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb://localhost/willsweb",
-    "jwtSecret": "mysecrettoken"
+  "mongoURI": "mongodb+srv://willex:chemistry@123@willsweb-nwjuu.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }

@@ -112,7 +112,7 @@ const Dashboard = ({
                   <Card.Group itemsPerRow={4}>
                     <Card>
                       <div className="col-md-2 ">
-                        <a href="contact-backup.html">
+                        <a href="#">
                           <img src="images/contact-backup.png" alt="" />
                         </a>
                       </div>
@@ -181,7 +181,7 @@ const Dashboard = ({
                     </Card>
                     <Card>
                       <div className="col-md-2 ">
-                        <a href="law.html">
+                        <a href="#">
                           <img src="images/law.png" alt="" />
                         </a>
                       </div>
@@ -195,7 +195,7 @@ const Dashboard = ({
                     </Card>
                     <Card>
                       <div className="col-md-2 ">
-                        <a href="city-guide.html">
+                        <a href="#">
                           <img src="images/city-guide.png" alt="" />
                         </a>
                       </div>

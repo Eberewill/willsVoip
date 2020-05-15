@@ -13,13 +13,15 @@ import recent from "./images/recent.png";
 import contact from "./images/contact.png";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout, profile }) => {
-  
-	const account = <Link to='/userprofile'>Account</Link>
-	const signout = <Link to='#' onClick={logout}>Sign Out</Link>
-	
-	
-	const options = [
-    { key: "user", text: account, icon: "user"  },
+  const account = <Link to="/userprofile">Account</Link>;
+  const signout = (
+    <Link to="#" onClick={logout}>
+      Sign Out
+    </Link>
+  );
+
+  const options = [
+    { key: "user", text: account, icon: "user" },
     { key: "settings", text: "Settings", icon: "settings" },
     { key: "sign-out", text: signout, icon: "sign out" },
   ];
@@ -76,12 +78,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout, profile }) => {
                     >
                       <ul className="nav navbar-nav">
                         <li className="mega-menu dropdown">
-                          <a href="chat.html">
+                          <a href="#">
                             <img src={chat} width="116" height="107" />
                           </a>
                         </li>
                         <li className="mega-menu dropdown">
-                         <Link to="/dailpad">
+                          <Link to="#">
                             <img
                               src={dialpad}
                               width="116"
@@ -103,21 +105,23 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout, profile }) => {
                               height="107"
                               alt="img"
                             />{" "}
-                         </Link>
+                          </Link>
                         </li>
-                          {profile !== null ?  (
-                            <><li className="dropdown">
-                          <Dropdown
-                            trigger={image}
-                            options={options}
-                            pointing="top right"
-                            icon={null}
-                          />
-                        </li></>
-                          ) : (<></>)
-                         }
+                        {profile !== null ? (
+                          <>
+                            <li className="dropdown">
+                              <Dropdown
+                                trigger={image}
+                                options={options}
+                                pointing="top right"
+                                icon={null}
+                              />
+                            </li>
+                          </>
+                        ) : (
+                          <></>
+                        )}
                       </ul>
-                     
                     </div>
                   </div>
                 </nav>
@@ -142,7 +146,6 @@ Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
-
 };
 const mapStateToProps = (state) => ({
   auth: state.auth,
